@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Home from "./screens/Home";
+import Post from "./components/Post";
 const App = () => {
   return (
     <>
@@ -17,7 +18,8 @@ const App = () => {
         backgroundColor="#61dafb"
       />
       <SafeAreaView>
-        <Home />
+        {/* <Home /> */}
+        <Post />
       </SafeAreaView>
     </>
   );
