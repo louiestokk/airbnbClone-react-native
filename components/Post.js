@@ -1,26 +1,40 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const Post = () => {
+const Post = (props) => {
+  const {
+    image,
+    bed,
+    type,
+    title,
+    price,
+    description,
+    oldPrice,
+    newPrice,
+    coordinate,
+    bedroom,
+    totalPrice
+  } = props.post;
+
   return (
     <View style={styles.container}>
       <Image
         style={styles.image}
         source={{
-          uri: "https://www.blognone.com/sites/default/files/externals/e08363656966efae98d844937080d0a8.jpg"
+          uri: image
         }}
       />
-      <Text style={styles.bedrooms}>1 bed 1 bedroom</Text>
+      <Text style={styles.bedrooms}>
+        {bed} bed {bedroom} bedroom
+      </Text>
       <Text style={styles.description} numberOfLines={2}>
-        Entire flat - Puerto de la Cruz Bonito estudio con vistas en el Taor. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old.
+        {type}. {title}
       </Text>
       <Text style={styles.prices}>
-        <Text style={styles.oldPrice}>36$</Text>
-        <Text style={styles.newPrice}> 30$ </Text> /night
+        <Text style={styles.oldPrice}>{oldPrice}$</Text>
+        <Text style={styles.newPrice}> {newPrice}$ </Text> /night
       </Text>
-      <Text style={styles.totalPrice}>230$ total</Text>
+      <Text style={styles.totalPrice}>{totalPrice}$ total</Text>
     </View>
   );
 };

@@ -9,7 +9,9 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import Home from "./screens/Home";
 import Post from "./components/Post";
+import feed from "./assets/data/feed";
 const App = () => {
+  const post1 = feed[0];
   return (
     <>
       <StatusBar
@@ -19,7 +21,7 @@ const App = () => {
       />
       <SafeAreaView>
         {/* <Home /> */}
-        <Post />
+        <Post post={post1} />
       </SafeAreaView>
     </>
   );
