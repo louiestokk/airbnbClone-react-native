@@ -10,6 +10,9 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import Home from "./screens/Home";
 import Post from "./components/Post";
 import feed from "./assets/data/feed";
+import SearchResults from "./screens/SearchResults";
+import DestinationSearch from "./screens/DestinationSearch";
+import Guest from "./screens/Guest";
 const App = () => {
   const post1 = feed[0];
   return (
@@ -21,7 +24,10 @@ const App = () => {
       />
       <SafeAreaView>
         {/* <Home /> */}
-        <Post post={post1} />
+        {/* <Post post={post1} /> */}
+        {/* <SearchResults /> */}
+        {/* <DestinationSearch /> */}
+        <Guest />
       </SafeAreaView>
     </>
   );

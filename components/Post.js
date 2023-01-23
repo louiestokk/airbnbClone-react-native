@@ -7,7 +7,6 @@ const Post = (props) => {
     bed,
     type,
     title,
-    price,
     description,
     oldPrice,
     newPrice,
