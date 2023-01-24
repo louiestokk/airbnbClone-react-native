@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   StatusBar
 } from "react-native";
+import "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Home from "./screens/Home";
 import Post from "./components/Post";
@@ -13,6 +14,7 @@ import feed from "./assets/data/feed";
 import SearchResults from "./screens/SearchResults";
 import DestinationSearch from "./screens/DestinationSearch";
 import Guest from "./screens/Guest";
+import Router from "./navigation/Router";
 const App = () => {
   const post1 = feed[0];
   return (
@@ -22,13 +24,7 @@ const App = () => {
         animated={true}
         backgroundColor="#61dafb"
       />
-      <SafeAreaView>
-        {/* <Home /> */}
-        {/* <Post post={post1} /> */}
-        {/* <SearchResults /> */}
-        {/* <DestinationSearch /> */}
-        <Guest />
-      </SafeAreaView>
+      <Router />
     </>
   );
 };

@@ -8,13 +8,15 @@ import {
   Pressable,
   Dimensions
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import Fontisto from "react-native-vector-icons/Fontisto";
 const Home = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <Pressable
         style={styles.searchButton}
-        onPress={() => console.warn("search btn clicked")}
+        onPress={() => navigation.navigate("Destination Search")}
       >
         <Fontisto name="search" size={25} color="#f15454" />
         <Text style={styles.buttonText}>Where are you going?</Text>
@@ -78,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     position: "absolute",
-    top: 20,
+    top: 30,
     zIndex: 100
   },
   searchButtonText: {
